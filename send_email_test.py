@@ -3,10 +3,10 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # Configurações do email
-smtp_server = "smtp.gmail.com"
-smtp_port = 587
+smtp_server = "localhost"
+smtp_port = 2500
 email_user = "andyougamers@gmail.com"
-email_password = "games2024"  # Use um App Password ou senha específica para o app
+##email_password = "games2024"  # Use um App Password ou senha específica para o app
 email_to = "andressacarolinebh68@gmail.com" # andressa
 
 # Criação do email
@@ -23,9 +23,7 @@ msg.attach(MIMEText(body, 'plain'))
 try:
     # Conexão com o servidor SMTP
     with smtplib.SMTP(smtp_server, smtp_port) as server:
-        server.starttls()  # Segurança TLS
-        server.login(email_user, email_password)
         server.sendmail(email_user, email_to, msg.as_string())
-        print("Email enviado com sucesso!")
+        print("Email enviado com sucesso para o MailSlurper!")
 except Exception as e:
     print(f"Erro ao enviar o email: {e}")
