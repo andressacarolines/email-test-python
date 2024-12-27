@@ -7,7 +7,7 @@ smtp_server = "smtp.gmail.com"
 smtp_port = 587
 email_user = "andressagomesrp@gmail.com"
 email_password = "Maal2024"  # Use um App Password ou senha específica para o app
-email_to = "andressacarolinebh68@gmail.com"
+email_to = "andressacarolinebh68@gmail.com" # andressa
 
 # Criação do email
 subject = "Teste de Email"
