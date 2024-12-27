@@ -2,12 +2,11 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-# Configurações do email
-smtp_server = "localhost"
-smtp_port = 2500
-email_user = "andyougamers@gmail.com"
-##email_password = "games2024"  # Use um App Password ou senha específica para o app
-email_to = "andressacarolinebh68@gmail.com" # andressa
+# Configurações do email (para MailSlurper)
+smtp_server = "localhost"  # Servidor local
+smtp_port = 2500  # Porta padrão do MailSlurper
+email_user = "andressagomesrp@gmail.com"  # Esse e-mail não precisa de autenticação com o MailSlurper
+email_to = "andressacarolinebh68@gmail.com"  # Destinatário para o teste
 
 # Criação do email
 subject = "Teste de Email"
@@ -21,7 +20,7 @@ msg['Subject'] = subject
 msg.attach(MIMEText(body, 'plain'))
 
 try:
-    # Conexão com o servidor SMTP
+    # Conexão com o servidor SMTP (MailSlurper)
     with smtplib.SMTP(smtp_server, smtp_port) as server:
         server.sendmail(email_user, email_to, msg.as_string())
         print("Email enviado com sucesso para o MailSlurper!")
