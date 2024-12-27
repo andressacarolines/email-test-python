@@ -5,8 +5,8 @@ from email.mime.multipart import MIMEMultipart
 # Configurações do email
 smtp_server = "smtp.gmail.com"
 smtp_port = 587
-email_user = "andressagomesrp@gmail.com"
-email_password = "Maal2024"  # Use um App Password ou senha específica para o app
+email_user = "andyougamers@gmail.com"
+email_password = "games2024"  # Use um App Password ou senha específica para o app
 email_to = "andressacarolinebh68@gmail.com" # andressa
 
 # Criação do email
